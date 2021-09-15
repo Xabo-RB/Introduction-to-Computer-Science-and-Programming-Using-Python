@@ -23,7 +23,14 @@ N = 40         #Número de iteraciones
 
 #%% Cálculo del balance, función (caja negra) del cálculo del balance
 def f(balance,MinimumMonthlyPayment,MonthlyInteresRate):
+    """
+    Esta función calcula el balance final después de un año, cuando pagas cada mes 
+    una cantidad (MinimumMonthlyPayment), y tienes un interés mensual sobre la deuda 
+    restante de cada mes de MonthlyInterestRate
     
+    Output: deuda final (balance después de un año pagando x mensualidades)
+
+    """
     for i in range(12):
         UnpaidBalance = balance - MinimumMonthlyPayment
         interest = MonthlyInteresRate * UnpaidBalance
