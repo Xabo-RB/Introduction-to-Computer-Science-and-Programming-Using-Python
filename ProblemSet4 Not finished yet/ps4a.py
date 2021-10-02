@@ -274,7 +274,7 @@ def playHand(hand, wordList, n):
     display = ''
     
     while sum(valores) > 0:
-        valores = list(hand.values())
+        
         # Display the hand
         for i in range(len(llaves)):
             display += llaves[i] + ' '
@@ -310,6 +310,7 @@ def playHand(hand, wordList, n):
                 print()
                 # Update the hand 
                 hand = updateHand(hand, word)
+                valores = list(hand.values())
     
     print('Run out of letters. Total score: ' + str(totalscore) + ' points.')
     # Game is over (user entered a '.' or ran out of letters), so 
@@ -333,8 +334,25 @@ def playGame(wordList):
     2) When done playing the hand, repeat from step 1    
     """
     # TO DO ... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this line when you code the function
-   
+    hand={}
+    while True:
+        juego = input('Enter n to deal a new hand, r to replay the last hand, or e to end game: ')
+        
+        if juego == 'r' and hand == {}:
+            print('You have not played a hand yet. Please play a new hand first!')
+        
+        elif juego == 'r' and hand != {}:
+            playHand(hand, wordList, HAND_SIZE)
+        
+        elif juego == 'e':
+            break
+        
+        elif juego == 'n':
+            hand = dealHand(HAND_SIZE)
+            playHand(hand, wordList, HAND_SIZE)
+        else:
+            print('Invalid command.')
+            
 
 
 
