@@ -3,7 +3,4 @@ Solved exercises of the online course "Introduction to Computer Science and Prog
 The statements of the exercises are written in the code of each exercise.
 
 
-![Github All Releases](https://img.shields.io/github/downloads/Xabo-RB/Introduction-to-Computer-Science-and-Programming-Using-Python/total?style=social)
-
-
 ![Github All Releases](https://img.shields.io/github/repo-size/Xabo-RB/Introduction-to-Computer-Science-and-Programming-Using-Python)
